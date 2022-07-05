@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+gunicorn = "*"
+flask-cors = "*"
+pytest = "*"
+pytest-cov = "*"
+psycopg2 = "*"
+flask-sqlalchemy = "*"
+psycopg2-binary = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+dev = "bash -c \"export FLASK_ENV='development' && flask run\""
+start = "gunicorn app:app"
+test = "pytest ."
+coverage = "pytest --cov-report term-missing --cov=."
