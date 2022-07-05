@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS cats;
 
-CREATE TABLE users (
+CREATE TABLE cats (
   id serial PRIMARY KEY,
   name varchar(50) NOT NULL,
-  score int NOT NULL
+  age int NOT NULL
 );

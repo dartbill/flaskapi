@@ -1,7 +1,6 @@
-INSERT INTO users (name, score)
+INSERT INTO cats (name, age)
 VALUES
-('init2winit', 10),
-('Jamie', 3),
-('Supercool', 6),
-('IamAmazing', 2),
-('Stella', 0);
+('Mango', 2),
+('Salem', 2),
+('Alvin', 12);
+
