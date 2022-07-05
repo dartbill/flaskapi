@@ -10,11 +10,17 @@ CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 db = SQLAlchemy(app)
-db.create_all()
+# db.create_all()
+
+
 
 @app.route('/')
 def home():
     return jsonify({'message': 'Hello from Flask!'}), 200
+
+@app.route('/test')
+def test():
+    return db.query.all, 200
 
 @app.route('/api/cats', methods=['GET', 'POST'])
 def cats_handler():
