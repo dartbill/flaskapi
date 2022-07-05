@@ -22,11 +22,11 @@ CORS(app)
 
 # db.create_all()
 
-@app.route('/items/<id>', methods=['GET'])
-def get_item(id):
-  item = Item.query.get(id)
-  del item.__dict__['_sa_instance_state']
-  return jsonify(item.__dict__)
+# @app.route('/items/<id>', methods=['GET'])
+# def get_item(id):
+#   item = Item.query.get(id)
+#   del item.__dict__['_sa_instance_state']
+#   return jsonify(item.__dict__)
 
 @app.route('/')
 def home():
